@@ -1,13 +1,26 @@
 var pigLatin = function(wordInput) {
-var vowel = ["a", "e","i", "o", "u"];
-var wordInputSplit = wordInput.split('');
+  var vowel = ["a", "e", "i", "o", "u"];
+  var vowelCaps = ["A", "E", "I", "O", "U"]
+  var wordInputSplit = wordInput.split('');
+  var firstLetter = wordInputSplit[0];
 
-  if (vowel.ofIndex(wordInputSplit[0]) != -1) {
-    wordInputSplit[0] = wordInputSplit + "way";
+  if (vowel.indexOf(firstLetter) != -1) {
+    var firstLetterReturn = wordInputSplit.join('') + "way";
+    return firstLetterReturn;
   }
-  else }
+  else if(vowelCaps.indexOf(firstLetter) != -1) {
+    var firstLetterReturn = wordInputSplit.join('') + "way";
+    return firstLetterReturn;
+
+  }
+  else {
+
+
     return wordInput;
   }
+};
+
+
 
 $(document).ready(function() {
   $("form#pig-form").submit(function(event) {
