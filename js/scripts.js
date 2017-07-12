@@ -1,20 +1,21 @@
 var pigLatin = function(wordInput) {
   var vowel = ["a", "e", "i", "o", "u"];
   var vowelCaps = ["A", "E", "I", "O", "U"]
-  var splitedWord = wordInput.split('');
-  var firstLetter = splitedWord[0];
+  var splittedWord = wordInput.split('');
+  var firstLetter = splittedWord[0];
   var consonant = ["c","d","f","g","h","i","j","k","l","m", "n", "p", "q", "r", "s", "t", "v", "x", "z", "y"];
+
   if (vowel.indexOf(firstLetter) != -1) {
-    var firstLetterReturn = wordInputSplit.join('') + "way";
+    var firstLetterReturn = splittedWord.join('') + "way";
     return firstLetterReturn;
   }
   else if(vowelCaps.indexOf(firstLetter) != -1) {
-    var firstLetterReturn = wordInputSplit.join('') + "way";
+    var firstLetterReturn = splittedWord.join('') + "way";
     return firstLetterReturn;
   }
   else if(consonant.indexOf(firstLetter) != -1) {
-    var sliced = splitedWord.slice(1);
-    sliced.push(splitedWord[0]);
+    var sliced = splittedWord.slice(1);
+    sliced.push(splittedWord[0]);
     var newWordCopy = sliced;
 
     var joinedNewWord = newWordCopy.join('');
