@@ -4,22 +4,21 @@ var pigLatin = function(wordInput) {
   var splittedWord = wordInput.split('');
   var consWord = [];
 
-  for (i = 0; i < vowels.length; i++) {
+  for (var i = 0; i < vowels.length; i++) {
     if (splittedWord[0] === vowels[i]) {
     return splittedWord.join('') + "way";
     }
-  } for (j = 0; j < splittedWord.length; j++) {
-        while (splittedWord[j] != vowels[i]) {
+   for (j = 0; j < 3; j++) {
+        if (splittedWord[j] !== vowels[j]) {
         var consWord1 = splittedWord[j];
         consWord.push(consWord1);
       } debugger;
-        var sliceWord = splittedWord.slice(vowels[i]);
-        sliceWord.push(consWord);
-
-        return sliceWord.join('') + "ay";
-      }
+    } var sliceWord = splittedWord.slice(j);
+      sliceWord.push(consWord);
+      return  sliceWord.join('') + "ay";
     }
-
+    return wordInput;
+ }
     // return splittedWord.join('');
 
 
